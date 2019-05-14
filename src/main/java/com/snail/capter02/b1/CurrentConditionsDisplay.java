@@ -1,4 +1,4 @@
-package com.snail.capter02;
+package com.snail.capter02.b1;
 
 /**
  * 布告栏

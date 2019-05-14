@@ -1,4 +1,4 @@
-package com.snail.capter02;
+package com.snail.capter02.b1;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;

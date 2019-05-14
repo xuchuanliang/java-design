@@ -1,4 +1,4 @@
-package com.snail.capter02;
+package com.snail.capter02.b1;
 
 /**
  * 观察者模式-主题
