@@ -1,4 +1,4 @@
-package com.snail.capter04;
+package com.snail.capter04.b1;
 
 /**
  * 简单工厂

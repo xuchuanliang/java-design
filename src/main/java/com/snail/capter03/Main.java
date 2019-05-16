@@ -13,7 +13,11 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) {
 //        test1();
-        test2();
+        try {
+            test2();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void test1() {
@@ -29,7 +33,7 @@ public class Main {
         System.out.println(beverage2.getDescription() + " $" + beverage2.cost());
     }
 
-    public void test2() throws IOException {
+    public static void test2() throws IOException {
         InputStream inputStream = new BufferedInputStream(new BufferedInputStream(new FileInputStream("text.text")));
         int c;
         while ((c=inputStream.read())>0){

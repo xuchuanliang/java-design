@@ -1,4 +1,4 @@
-package com.snail.capter04;
+package com.snail.capter04.b1;
 
 /**
  * @author xuchuanliangbt
@@ -9,4 +9,7 @@ package com.snail.capter04;
  * @Version
  */
 public class Test {
+    public static void main(String[] args){
+        System.out.println("你好呀");
+    }
 }
