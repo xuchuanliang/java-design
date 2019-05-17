@@ -28,14 +28,7 @@ public abstract class Pizza {
      */
     ArrayList toppings = new ArrayList();
 
-    public void prepare(){
-        System.out.println("准备"+name);
-        System.out.println("和面中");
-        System.out.println("添加酱料中");
-        toppings.forEach(t->{
-            System.out.println("   --"+t);
-        });
-    }
+    public abstract void prepare();
 
     public void bake(){
         System.out.println("烤中");
