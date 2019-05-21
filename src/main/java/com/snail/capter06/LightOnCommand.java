@@ -3,10 +3,10 @@ package com.snail.capter06;
 /**
  * 灯的命令实现类
  */
-public class LigntCommand implements Command{
+public class LightOnCommand implements Command{
     private Light light;
 
-    public LigntCommand(Light light) {
+    public LightOnCommand(Light light) {
         this.light = light;
     }
 
