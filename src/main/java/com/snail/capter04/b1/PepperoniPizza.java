@@ -9,4 +9,8 @@ package com.snail.capter04.b1;
  * @Version
  */
 public class PepperoniPizza extends Pizza {
+    @Override
+    public void prepare() {
+
+    }
 }
