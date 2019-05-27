@@ -8,7 +8,7 @@ package com.snail.capter10.b2;
  * @date 2019/5/2712:08
  * @Version
  */
-public class NoQuarterState implements State {
+public class NoQuarterState extends State {
 
     private GumbalMachine gumbalMachine;
 
@@ -22,18 +22,4 @@ public class NoQuarterState implements State {
         gumbalMachine.setState(gumbalMachine.getHasQuarterState());
     }
 
-    @Override
-    public void ejectQuarter() {
-        System.out.println("没有钱，没办法退给你");
-    }
-
-    @Override
-    public void turnCarnk() {
-        System.out.println("没有钱，转动了也没糖果给你");
-    }
-
-    @Override
-    public void dispense() {
-        System.out.println("非法操作");
-    }
 }

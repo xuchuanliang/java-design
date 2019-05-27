@@ -1,5 +1,7 @@
 package com.snail.capter10.b2;
 
+import java.util.Random;
+
 /**
  * @author xuchuanliangbt
  * @title: HasQuarterState
@@ -8,17 +10,14 @@ package com.snail.capter10.b2;
  * @date 2019/5/2712:08
  * @Version
  */
-public class HasQuarterState implements State{
+public class HasQuarterState extends State{
 
     private GumbalMachine gumbalMachine;
 
+    Random random = new Random(System.currentTimeMillis());
+
     public HasQuarterState(GumbalMachine gumbalMachine) {
         this.gumbalMachine = gumbalMachine;
-    }
-
-    @Override
-    public void insertQuarter() {
-        System.out.println("已经有钱了，不能在继续增加");
     }
 
     @Override
@@ -30,11 +29,11 @@ public class HasQuarterState implements State{
     @Override
     public void turnCarnk() {
         System.out.println("转动了");
-        gumbalMachine.setState(gumbalMachine.getSoldState());
-    }
-
-    @Override
-    public void dispense() {
-        System.out.println("不可以");
+        int winner = random.nextInt(10);
+        if(winner ==0 && gumbalMachine.getCount()>0){
+            gumbalMachine.setState(gumbalMachine.getWinnerState());
+        }else{
+            gumbalMachine.setState(gumbalMachine.getSoldState());
+        }
     }
 }

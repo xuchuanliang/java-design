@@ -8,24 +8,39 @@ package com.snail.capter10.b2;
  * @date 2019/5/2711:16
  * @Version
  */
-public interface State {
+public abstract class State {
     /**
      * 投入硬币
      */
-    void insertQuarter();
+    public void insertQuarter(){
+        System.out.println("error");
+    }
 
     /**
      * 退钱
      */
-    void ejectQuarter();
+    public void ejectQuarter(){
+        System.out.println("error");
+    }
 
     /**
      * 转动曲柄
      */
-    void turnCarnk();
+    public void turnCarnk(){
+        System.out.println("error");
+    }
 
     /**
      * 分发糖果
      */
-    void dispense();
+    public void dispense(){
+        System.out.println("error");
+    }
+
+    /**
+     * 补充糖果
+     */
+    public void fill(){
+        System.out.println("error");
+    }
 }

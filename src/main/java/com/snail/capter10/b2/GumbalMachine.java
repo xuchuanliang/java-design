@@ -8,6 +8,7 @@ public class GumbalMachine {
     private State noQuarterState;
     private State hasQuarterState;
     private State soldState;
+    private State winnerState;
 
     State state = soldOutState;
     int count = 0;
@@ -26,28 +27,28 @@ public class GumbalMachine {
     /**
      * 投入硬币
      */
-    void insertQuarter(){
+    public void insertQuarter(){
         state.insertQuarter();
     }
 
     /**
      * 退钱
      */
-    void ejectQuarter(){
+    public void ejectQuarter(){
         state.ejectQuarter();
     }
 
     /**
      * 转动曲柄
      */
-    void turnCarnk(){
+    public void turnCarnk(){
         state.turnCarnk();
     }
 
     /**
      * 分发糖果
      */
-    void dispense(){
+    public void dispense(){
         state.dispense();
     }
 
@@ -105,5 +106,13 @@ public class GumbalMachine {
 
     public int getCount() {
         return count;
+    }
+
+    public State getWinnerState() {
+        return winnerState;
+    }
+
+    public void setWinnerState(State winnerState) {
+        this.winnerState = winnerState;
     }
 }
