@@ -26,6 +26,7 @@ public class Flock implements Quackable{
         Iterator<Quackable> iterator = quackables.iterator();
         while (iterator.hasNext()){
             iterator.next().quack();
+            notifyObservers();
         }
     }
 
